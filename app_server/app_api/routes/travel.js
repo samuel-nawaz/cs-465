@@ -1,11 +1,8 @@
 const express = require('express'); 
 const router = express.Router(); 
-const controller= require('../app_api/controllers/travel'); 
+const controller = require('../controllers/travel'); 
 
 /* GET home page. */ 
-router.get('/', controller.travel); 
-router.get('/', function(req, res, next) {
-    controller.travel(req, res, next); // Call the travel function from the controller
-  });
+router.get('/', controller.travelList); 
 
 module.exports = router;
